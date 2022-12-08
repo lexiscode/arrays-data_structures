@@ -35,10 +35,12 @@ def is_anagram(str1,str2):
 
   # we have to sort the letters of the strings and then compare with same indexes
   # sorted() produces a sorted list by default
+  #This is the bottleneck becuase it has 0(NlogN) running time
   str1 = sorted(str1)
   str2 = sorted(str2)
 
   # now we have to check the letters with the same indexes
+  # 0(N) running time	
   for i in range(len(str1)): #or range(len(str2)) since both are of equal lengths
     if str1[i] != str2[i]:
       return False
@@ -47,4 +49,7 @@ def is_anagram(str1,str2):
 if __name__ == '__main__':
   str1 = input("Type in a word or phrase: ")
   str2 = input("Type in another word or phrase: ")
+
   print(is_anagram(str1,str2))
+
+#Overall running time is 0(NlogN) + 0(N) = 0(NlogN)
