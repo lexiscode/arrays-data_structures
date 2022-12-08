@@ -28,4 +28,4 @@ if __name__ == '__main__':
   reverse(list)
   print(list)
 
-  #Time Complexity: O(1), for using constant operations.
+  #Time Complexity: O(N) linear running time where N is the number of indexes in the T[] array.
