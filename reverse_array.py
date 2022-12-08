@@ -4,7 +4,6 @@ so no additional memory can be used!
 For example: input is [1,2,3,4,5] then the output is [5,4,3,2,1]
 '''
 
-
 #We will be increasing the lowIndex by 1 and be reducing the highIndex by 1. And when the lowIndex is equal to the highIndex
 #or when the lowIndex is greater than the highIndex, then the algorithm should be terminated.
 
@@ -28,3 +27,5 @@ if __name__ == '__main__':
   # calling the function
   reverse(list)
   print(list)
+
+  #Time Complexity: O(1), for using constant operations.
