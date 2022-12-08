@@ -24,3 +24,27 @@ if sort_first_word == sort_second_word:
   print("\nTrue")
 else:
   print("\nFalse")
+
+#######################
+#ALTERNATIVELY
+
+def is_anagram(str1,str2):
+  # if the length of the strings differ - they are not anagrams
+  if len(str1) != len(str2):
+    return False
+
+  # we have to sort the letters of the strings and then compare with same indexes
+  # sorted() produces a sorted list by default
+  str1 = sorted(str1)
+  str2 = sorted(str2)
+
+  # now we have to check the letters with the same indexes
+  for i in range(len(str1)): #or range(len(str2)) since both are of equal lengths
+    if str1[i] != str2[i]:
+      return False
+  return True
+
+if __name__ == '__main__':
+  str1 = input("Type in a word or phrase: ")
+  str2 = input("Type in another word or phrase: ")
+  print(is_anagram(str1,str2))
